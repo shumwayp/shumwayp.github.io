@@ -360,7 +360,7 @@ TV-Y7             10        10         10           10  </code></pre>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>titanic <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/titanic.csv"</span>)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>titanic[<span class="st">"NameGroup"</span>] <span class="op">=</span> titanic[<span class="st">"Name"</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x.split(<span class="st">","</span>)[<span class="dv">0</span>][<span class="dv">0</span>].lower())</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>titanic[<span class="st">"NameGroup"</span>] <span class="op">=</span> titanic[<span class="st">"Name"</span>].<span class="bu">str</span>.split(<span class="st">","</span>, expand<span class="op">=</span><span class="va">True</span>)[<span class="dv">0</span>].<span class="bu">str</span>[<span class="dv">0</span>].<span class="bu">str</span>.lower()</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>count_k <span class="op">=</span> (titanic[<span class="st">"NameGroup"</span>] <span class="op">==</span> <span class="st">"k"</span>).<span class="bu">sum</span>()</span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
